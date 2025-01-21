@@ -1,5 +1,7 @@
-# core/config.py
 import os
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 class Settings:
     # MySQL DB 설정
@@ -9,4 +11,4 @@ class Settings:
     MONGODB_URI = os.getenv("MONGODB_URI", "")
     MONGODB_DB_NAME = os.getenv("MONGODB_DB_NAME", "")
 
-settings = Settings()
+settings = Settings
